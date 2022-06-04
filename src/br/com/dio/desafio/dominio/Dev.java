@@ -7,8 +7,17 @@ import java.util.Set;
 
 public class Dev {
 	private String nome;
-	private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
-	private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
+	private Set<Conteudo> conteudosInscritos;
+	private Set<Conteudo> conteudosConcluidos;
+
+	public Dev() {
+	}
+
+	public Dev(String nome) {
+		this.nome = nome;
+		this.conteudosInscritos = new LinkedHashSet<>();
+		this.conteudosConcluidos = new LinkedHashSet<>();
+	}
 
 	public void inscreverBootcamp(Bootcamp bootcamp) {
 		this.conteudosInscritos.addAll(bootcamp.getConteudos());
@@ -17,7 +26,7 @@ public class Dev {
 
 	public void progredir() {
 		Optional<Conteudo> conteudo = this.conteudosInscritos.stream().findFirst();
-		if(conteudo.isPresent()) {
+		if (conteudo.isPresent()) {
 			this.conteudosConcluidos.add(conteudo.get());
 			this.conteudosInscritos.remove(conteudo.get());
 		} else {
