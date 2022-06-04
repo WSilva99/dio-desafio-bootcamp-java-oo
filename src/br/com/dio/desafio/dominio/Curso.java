@@ -6,6 +6,10 @@ public class Curso extends Conteudo {
 	public Curso() {
 		super();
 	}
+	
+	public Curso(String titulo, String descricao) {
+		super(titulo, descricao);
+	}
 
 	public Curso(String titulo, String descricao, int cargaHoraria) {
 		super(titulo, descricao);

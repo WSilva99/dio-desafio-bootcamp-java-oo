@@ -2,6 +2,7 @@ import java.time.LocalDate;
 
 import br.com.dio.desafio.dominio.Bootcamp;
 import br.com.dio.desafio.dominio.Curso;
+import br.com.dio.desafio.dominio.Desafio;
 import br.com.dio.desafio.dominio.Dev;
 import br.com.dio.desafio.dominio.Mentoria;
 
@@ -12,11 +13,15 @@ public class Main {
 		Curso curso2 = new Curso("Curso de Javascript", "Lorem ipsum dolor amet et al.", 4);
 		Mentoria mentoria1 = new Mentoria("Introducao ao Curso de Java",
 				"Aprenda a configurar o ambiente para o curso.", LocalDate.now());
+		Desafio desafio1 = new Desafio("Abstraindo um Bootcamp Usando Orientacao a Objetos em Java",
+				"Desmistifique a Programacao Orientada a Objetos (POO) com Java e pratique esse conceito fundamental nesse desafio.",
+				"intermediario");
 
 		Bootcamp bootcamp = new Bootcamp("Philips Fullstack",
 				"O bootcamp Philips Fullstack Developer e um programa gratuito para quem deseja iniciar a carreira em desenvolvimento e tecnologia da informacao.");
 		bootcamp.getConteudos().add(mentoria1);
 		bootcamp.getConteudos().add(curso1);
+		bootcamp.getConteudos().add(desafio1);
 		bootcamp.getConteudos().add(curso2);
 
 		Dev dev1 = new Dev("Walmir Silva");
@@ -33,6 +38,8 @@ public class Main {
 
 		dev1.progredir();
 		dev1.progredir();
+		dev1.progredir();
+		dev2.progredir();
 		dev2.progredir();
 
 		System.out.println("----------------");

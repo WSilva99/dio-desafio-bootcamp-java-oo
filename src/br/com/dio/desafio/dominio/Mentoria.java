@@ -9,6 +9,10 @@ public class Mentoria extends Conteudo {
 		super();
 	}
 
+	public Mentoria(String titulo, String descricao) {
+		super(titulo, descricao);
+	}
+
 	public Mentoria(String titulo, String descricao, LocalDate data) {
 		super(titulo, descricao);
 		this.data = data;
